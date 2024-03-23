@@ -1,12 +1,12 @@
 body {
-  background: #f9f7fe;
-  font-family: sans-serif;
+  background: #ffb5b5;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 h1 {
   text-align: center;
-  font-family: sans-serif;
-  font-size: 36px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 48px;
 }
 
 h2 {
@@ -18,12 +18,19 @@ select {
   display: block;
   width: 100%;
   font-size: 18px;
+  font-weight: bold;
   border-radius: 4px;
   padding: 10px;
+  background: #ffcab0;
 }
 
 .container {
-  background: white;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(253, 239, 132) 0%,
+    rgb(247, 198, 169) 54.2%,
+    rgb(21, 186, 196) 100.3%
+  );
   margin: 0 auto;
   padding: 30px;
   max-width: 600px;
@@ -51,13 +58,9 @@ select {
   font-size: 48px;
   font-weight: bold;
 }
-.time small {
-  font-size: 24px;
-  vertical-align: middle;
-  line-height: 48px;
-}
 
 footer {
+  padding: 20px;
   text-align: center;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.8);

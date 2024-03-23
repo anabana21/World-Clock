@@ -7,9 +7,7 @@ function updateTime() {
     let zurichTime = moment().tz("Europe/Zurich");
 
     zurichDateElement.innerHTML = zurichTime.format("MMMM Do YYYY");
-    zurichTimeElement.innerHTML = zurichTime.format(
-      "h:mm:ss [<small>]A[<small>]"
-    );
+    zurichTimeElement.innerHTML = zurichTime.format("H:mm:ss");
   }
 
   //Sydney
@@ -20,9 +18,18 @@ function updateTime() {
     let sydneyTime = moment().tz("Australia/Sydney");
 
     sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do YYYY");
-    sydneyTimeElement.innerHTML = sydneyTime.format(
-      "h:mm:ss [<small>]A[<small>]"
-    );
+    sydneyTimeElement.innerHTML = sydneyTime.format("H:mm:ss");
+  }
+
+  //Luanda
+  let luandaElement = document.querySelector("#luanda");
+  if (luandaElement) {
+    let luandaDateElement = luandaElement.querySelector(".date");
+    let luandaTimeElement = luandaElement.querySelector(".time");
+    let luandaTime = moment().tz("Africa/Luanda");
+
+    luandaDateElement.innerHTML = luandaTime.format("MMMM Do YYYY");
+    luandaTimeElement.innerHTML = luandaTime.format("H:mm:ss");
   }
 }
 
@@ -44,6 +51,7 @@ function updateCity(event) {
         ${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small>
       </div>
     </div>
+    <a href= "/">All cities</a>
   `;
 }
 
